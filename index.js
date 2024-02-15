@@ -9,11 +9,8 @@ app.use(express.json())
 
 app.use('/blog',blogRoutes)
 
-
 app.all('*', (req, resp) => {
-
     resp.status(404).send("route does not exists!")
-
 });
 
 

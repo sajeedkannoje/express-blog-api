@@ -1,14 +1,12 @@
+const { createPost } = require('../controller/BlogController')
+
+
 const route = require('express').Router()
 
-route.get('/:id?', (req, resp) => {
-
-    resp.status(200).send("ok")
-})
+route.get('/:id?', createPost)
 
 route.post('/', (req, resp) => {
 
-    // create a new post
-    resp.status(200).send("ok")
 })
 
 route.put('/', (req, resp) => {
